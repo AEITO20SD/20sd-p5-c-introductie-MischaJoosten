@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Opdracht2
 {
@@ -9,18 +10,24 @@ namespace Opdracht2
 
             int[,] array = new int[3, 3]
             {
-                { 1, 2, 3 }, 
-                { 4, 5, 6 }, 
+                { 1, 2, 3 },
+                { 4, 5, 6 },
                 { 7, 8, 9 }
             };
 
-            for (int i = 0; i < array.GetLength(0); i++)
+            for (int rij = 0; rij < 3; rij++)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                for (int column = 0; column < 3; column++)
                 {
-                    Console.Write(array[ i, j ]);
+                    Console.Write(array[rij, column] + " ");
                 }
+                Console.WriteLine();
             }
+
+
+            //telt alles bij elkaar op
+            int[] Optellen = { 1, 2, 3, 4, 5, 6, 7, 8, 9, };
+            Console.WriteLine(Optellen.Sum());
         }
     }
 }
