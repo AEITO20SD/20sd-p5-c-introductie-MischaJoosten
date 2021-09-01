@@ -6,9 +6,12 @@ namespace Opdracht2
     {
         static void Main(string[] args)
         {
+
             int[,] array = new int[3, 3]
             {
-                { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }
+                { 1, 2, 3 }, 
+                { 4, 5, 6 }, 
+                { 7, 8, 9 }
             };
 
             for (int i = 0; i < array.GetLength(0); i++)
