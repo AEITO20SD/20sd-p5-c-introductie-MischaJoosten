@@ -11,34 +11,34 @@ namespace Opdracht1
             return getal; // returnt de input bij getal
         }
 
-        private static int Som(int getal1, int getal2) // Verwacht een input van getal1 en getal2
+        // Rekend de waarden uit met de 2 cijfers die ingevuld zijn
+        private static int Som(int getal1, int getal2)
         {
-            return getal1 + getal2; // Geeft de waarden van getal 1 en 2 terug maar doet ze eerst bij elkaar
+            return getal1 + getal2;
         }
 
-        private static int Verschil(int getal1, int getal2) // Verwacht een input van getal1 en getal2
+        private static int Verschil(int getal1, int getal2)
         {
-            return getal1 - getal2; // Geeft de waarden van getal 1 en 2 terug maar haalt ze eerst van elkaar af
+            return getal1 - getal2;
         }
 
-        private static int Product(int getal1, int getal2) // Verwacht een input van getal1 en getal2
+        private static int Product(int getal1, int getal2)
         {
-            return getal1 * getal2; // Geeft de waarden van getal 1 en 2 terug maar vermenigvuldigt ze eerst
+            return getal1 * getal2;
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Voer 2 getallen in"); // Vraagt om 2 getallen in te vullen
-            int getal1 = Leesgeheelgetal(); // Vraagt of er iets is ingevuld
-            int getal2 = Leesgeheelgetal(); // Vraagt of er iets is ingevuld
-            // uitkomst som tonen
-            int uitkomstsom = Som(getal1, getal2); // Vraagt naar de uitkomst
-            Console.WriteLine($"De som van {getal1} en {getal2} is {uitkomstsom}"); // Weergeeft de uitkomst
-
-            int uitkomstverschil = Verschil(getal1, getal2); // Vraagt naar de uitkomst
-            Console.WriteLine($"Het verschil van {getal1} en {getal2} is {uitkomstverschil}"); // Weergeeft de uitkomst
-
-            int uitkomstproduct = Product(getal1, getal2); // Vraagt naar de uitkomst
-            Console.WriteLine($"Het product van {getal1} en {getal2} is {uitkomstproduct}"); // Weergeeft de uitkomst
+            // Vraagt of er iets is ingevuld
+            int getal1 = Leesgeheelgetal();
+            int getal2 = Leesgeheelgetal();
+            // Laat de uitkomst van de som tonen
+            int uitkomstsom = Som(getal1, getal2);
+            Console.WriteLine($"De som van {getal1} en {getal2} is {uitkomstsom}");
+            int uitkomstverschil = Verschil(getal1, getal2);
+            Console.WriteLine($"Het verschil van {getal1} en {getal2} is {uitkomstverschil}");
+            int uitkomstproduct = Product(getal1, getal2);
+            Console.WriteLine($"Het product van {getal1} en {getal2} is {uitkomstproduct}");
         }
     }
 }
