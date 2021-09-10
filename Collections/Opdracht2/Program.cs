@@ -6,11 +6,11 @@ namespace Opdracht2
     class Program
     {
         private static Dictionary<string, double> voertuigen;
+        private static Queue<string> file;
         private static void Initialiseer()
         {
-            Dictionary<string, double> voertuigen;
             voertuigen = new Dictionary<string, double>();
-            Queue<string> file;
+            file = new Queue<string>();
         }
 
         private static void Simuleer()
