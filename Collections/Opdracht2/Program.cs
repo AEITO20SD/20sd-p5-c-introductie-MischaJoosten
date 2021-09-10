@@ -5,6 +5,7 @@ namespace Opdracht2
 {
     class Program
     {
+        private static Dictionary<string, double> voertuigen;
         private static void Initialiseer()
         {
             Dictionary<string, double> voertuigen;
@@ -14,14 +15,42 @@ namespace Opdracht2
 
         private static void Simuleer()
         {
-            Queue<string> file;
+            Queue<string> file = new Queue<string>();
+            string tekst;
+            bool doorgaan = true;
+            while (doorgaan)
+            {
+                var keuze = HaalKeuze();
+                keuze = keuze.ToLower();
+                switch (keuze)
+                {
+                    case "stoppen":
+                        tekst = Stoppen(file);
+                        Console.WriteLine(tekst);
+                        doorgaan = false;
+                        break;
+                    case "toevoegen":
+                        tekst = Toevoegen(file);
+                        Console.WriteLine(tekst);
+                        Printen(file);
+                        break;
+                    case "weghalen":
+                        tekst = Weghalen(file);
+                        Console.WriteLine(tekst);
+                        Printen(file);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
+    
 
         private static string HaalKeuze()
         {
             // Vraagt en leest welke keuze je maakt
             Console.WriteLine("Vul een keuze in");
-            Console.WriteLine("Stoppen, Toevoegen, Weghalen");
+            Console.WriteLine("Toevoegen, Weghalen, Stoppen");
             var keuze = Console.ReadLine();
 
             return keuze;
@@ -30,9 +59,26 @@ namespace Opdracht2
         private static string Toevoegen(Queue<string> file)
         {
             // Hier wordt het voertuig toegevoegd
-            Console.WriteLine("Voer een voertuig in");
+            Console.WriteLine("Kies uit: Auto, Vrachtwagen, Fiets, Bus");
             string voertuig = Console.ReadLine();
-            file.Enqueue(voertuig);
+            voertuig = voertuig.ToLower();
+            switch (voertuig)
+            {
+                case "auto":
+                    file.Enqueue("Auto");
+                    break;
+                case "vrachtwagen":
+                    file.Enqueue("Vrachtwagen");
+                    break;
+                case "fiets":
+                    file.Enqueue("Fiets");
+                    break;
+                case "bus":
+                    file.Enqueue("Bus");
+                    break;
+                default:
+                    break;
+            }
             return "Toegevoegd";
         }
 
@@ -65,34 +111,6 @@ namespace Opdracht2
         {
             Initialiseer();
             Simuleer();
-            Queue<string> file = new Queue<string>();
-            string tekst;
-            var doorgaan = true;
-            while (doorgaan)
-            {
-                var keuze = HaalKeuze();
-                keuze = keuze.ToLower();
-                switch (keuze)
-                {
-                    case "stoppen":
-                        tekst = Stoppen(file);
-                        Console.WriteLine(tekst);
-                        doorgaan = false;
-                        break;
-                    case "toevoegen":
-                        tekst = Toevoegen(file);
-                        Console.WriteLine(tekst);
-                        Printen(file);
-                        break;
-                    case "weghalen":
-                        tekst = Weghalen(file);
-                        Console.WriteLine(tekst);
-                        Printen(file);
-                        break;
-                    default:
-                        break;
-                }
-            }
         }
     }
 }
