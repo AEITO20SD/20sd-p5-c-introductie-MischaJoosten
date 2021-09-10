@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Personen</AssemblyName>
+    <RootNamespace>Personen</RootNamespace>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <Copyright>Mischa Joosten</Copyright>
+    <Description>Dit is een class</Description>
+    <Product>Auto</Product>
+    <Company>Horizon college</Company>
+    <Authors>Mischa Joosten</Authors>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\bin\Debug\net5.0\Personen.deps.json
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\bin\Debug\net5.0\Personen.dll
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\bin\Debug\net5.0\ref\Personen.dll
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\bin\Debug\net5.0\Personen.pdb
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Opdracht1.csproj.AssemblyReference.cache
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Opdracht1.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Opdracht1.AssemblyInfoInputs.cache
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Opdracht1.AssemblyInfo.cs
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Opdracht1.csproj.CoreCompileInputs.cache
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Personen.dll
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\ref\Personen.dll
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\OOP\Opdracht1\obj\Debug\net5.0\Personen.pdb
