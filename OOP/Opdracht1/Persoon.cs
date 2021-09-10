@@ -4,7 +4,6 @@ namespace Personen
 {
     public class Persoon
     {
-        
         public string Voornaam { get; set; }
 
         public string Achternaam { get; set; }
