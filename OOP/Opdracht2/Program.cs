@@ -11,11 +11,12 @@ namespace Opdracht2
 
         private static void Invullen()
         {
-            Persoon persoon1 = new Persoon();
-            persoon1.Voornaam = "Mischa";
-            persoon1.Achternaam = "Joosten";
-            persoon1.GeboorteDatum = DateTime.Now;
+            string voornaam = "Mischa";
+            string achternaam = "Joosten";
+            Persoon persoon1 = new Persoon(voornaam, achternaam);
             personen.Add(persoon1);
+            persoon1.Lengte = 50;
+            persoon1.Gewicht = 321.6;
         }
 
         private static void PersonenWeergeven()
@@ -25,6 +26,8 @@ namespace Opdracht2
                 Console.WriteLine(persoon.Voornaam);
                 Console.WriteLine(persoon.Achternaam);
                 Console.WriteLine(persoon.GeboorteDatum);
+                Console.WriteLine(persoon.Lengte);
+                Console.WriteLine(persoon.Gewicht);
             }
         }
         static void Main(string[] args)
