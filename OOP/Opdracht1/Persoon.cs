@@ -4,7 +4,7 @@ namespace Personen
 {
     public class Persoon
     {
-        public Persoon (string voornaam, string achternaam)
+        public Persoon(string voornaam, string achternaam)
         {
             Voornaam = voornaam;
             Achternaam = achternaam;
@@ -19,7 +19,7 @@ namespace Personen
         public string Geslacht { get; set; }
 
         private int _lengte = 30;
-        public int Lengte 
+        public int Lengte
         {
             get
             {
@@ -42,11 +42,15 @@ namespace Personen
             }
             set
             {
-                if (value >= 1.5 && value <= 321.6 )
+                if (value >= 1.5 && value <= 321.6)
                 {
                     _gewicht1 = value;
                 }
             }
+        }
+        public virtual string WieBenIk()
+        {
+            return $"Ik ben {Voornaam} {Achternaam} en ik ben geboren op {GeboorteDatum}";
         }
     }
 }
