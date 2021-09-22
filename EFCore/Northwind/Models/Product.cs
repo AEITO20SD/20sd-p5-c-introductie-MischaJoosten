@@ -19,9 +19,15 @@ namespace Northwind.Models
         public string QuantityPerUnit { get; set; }
 
         [Required]
-        public double UnitsPrice { get; set; }
+        public decimal UnitPrice { get; set; }
 
         [Column(TypeName = "smallint")]
         public int UnitsInStock { get; set; }
+
+        [Column(TypeName = "smallint")]
+        public int UnitsOnOrder { get; set; }
+
+        [Column(TypeName = "smallint")]
+        public int ReorderLevel { get; set; }
     }   
 }

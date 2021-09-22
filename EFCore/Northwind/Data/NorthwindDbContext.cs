@@ -11,6 +11,7 @@ namespace Northwind.Data
     class NorthwindDbContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; internal set; }
 
         private string _connectionString;
 
