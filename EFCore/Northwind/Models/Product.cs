@@ -11,6 +11,10 @@ namespace Northwind.Models
         [Required, StringLength(40)]
         public string ProductName { get; set; }
 
+        [ForeignKey("Suppliers")]
+        public int SupplierID { get; set; }
+        public Supplier Supplier { get; set; }
+
         [ForeignKey("Categories")]
         public int CategoryID { get; set; }
         public Category Category { get; set; }
@@ -29,5 +33,5 @@ namespace Northwind.Models
 
         [Column(TypeName = "smallint")]
         public int ReorderLevel { get; set; }
-    }   
+    }
 }
