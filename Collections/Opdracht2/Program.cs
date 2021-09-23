@@ -66,20 +66,25 @@ namespace Opdracht2
             {
                 case "auto":
                     file.Enqueue("Auto");
+                    Console.WriteLine("Toegevoegd");
                     break;
                 case "vrachtwagen":
                     file.Enqueue("Vrachtwagen");
+                    Console.WriteLine("Toegevoegd");
                     break;
                 case "fiets":
                     file.Enqueue("Fiets");
+                    Console.WriteLine("Toegevoegd");
                     break;
                 case "bus":
                     file.Enqueue("Bus");
+                    Console.WriteLine("Toegevoegd");
                     break;
                 default:
+                    Console.WriteLine("Kies een goed voertuig");
                     break;
             }
-            return "Toegevoegd";
+            return "";
         }
 
         private static string Weghalen(Queue<string> file)
