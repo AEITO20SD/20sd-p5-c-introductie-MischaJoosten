@@ -28,6 +28,12 @@ namespace Northwind.Data
             _connectionString = connectionString;
         }
 
+        public NorthwindDbContext(DbContextOptions<NorthwindDbContext> options)
+            : base(options)
+        {
+
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_connectionString);
