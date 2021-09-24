@@ -33,5 +33,7 @@ namespace Northwind.Models
 
         [Column(TypeName = "smallint")]
         public int ReorderLevel { get; set; }
+
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

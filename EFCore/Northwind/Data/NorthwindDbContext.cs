@@ -15,6 +15,12 @@ namespace Northwind.Data
 
         public DbSet<Supplier> Suppliers { get; set; }
 
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<Customer> Customers { get; set; }
+
         private string _connectionString;
 
         public NorthwindDbContext(string connectionString)
