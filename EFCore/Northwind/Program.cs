@@ -9,7 +9,7 @@ namespace Northwind
     {
         private static string _connectionsString = @"Server=(localdb)\MSSQLLocalDB;Database=Northwind";
 
-        private static void ToonCategories()
+        private static void ShowCategories()
         {
             var db = new NorthwindDbContext(_connectionsString);
             var categories = db.Categories.ToList();
@@ -19,7 +19,7 @@ namespace Northwind
             }
         }
 
-        private static void ToonProducts(int supID)
+        private static void ShowProductsBySupplier(int supID)
         {
             var db = new NorthwindDbContext(_connectionsString);
             var products = db.Products
@@ -34,7 +34,7 @@ namespace Northwind
             }
         }
 
-        private static void ToonSuppliers()
+        private static void ShowSuppliers()
         {
             var db = new NorthwindDbContext(_connectionsString);
             var suppliers = db.Suppliers.ToList();
@@ -46,12 +46,12 @@ namespace Northwind
         }
         static void Main(string[] args)
         {
-            ToonSuppliers();
+            ShowSuppliers();
             Console.WriteLine("Kies een supplier");
             var SupID = Console.ReadLine();
             int supID;
             int.TryParse(SupID, out supID);
-            ToonProducts(supID);
+            ShowProductsBySupplier(supID);
         }
     }
 }
