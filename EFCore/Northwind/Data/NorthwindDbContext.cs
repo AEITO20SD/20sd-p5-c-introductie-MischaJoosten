@@ -32,5 +32,15 @@ namespace Northwind.Data
         {
             optionsBuilder.UseSqlServer(_connectionString);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        {
+
+            modelBuilder.Entity<OrderDetail>()
+
+                .HasKey(od => new { od.OrderID, od.ProductID });
+
+        }
     }
 }
