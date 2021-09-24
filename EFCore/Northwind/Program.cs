@@ -19,11 +19,10 @@ namespace Northwind
             }
         }
 
-        private static void ToonProducts(int catID, int supID)
+        private static void ToonProducts(int supID)
         {
             var db = new NorthwindDbContext(_connectionsString);
             var products = db.Products
-            //.Where(a => a.CategoryID == catID)
             .Where(a => a.SupplierID == supID)
             .Include(a => a.Category)
             .Include(a => a.Supplier)
@@ -47,18 +46,12 @@ namespace Northwind
         }
         static void Main(string[] args)
         {
-            ToonCategories();
-            Console.WriteLine("Kies een category");
-            var CatID = Console.ReadLine();
-            int catID;
-            int.TryParse(CatID, out catID);
-
             ToonSuppliers();
             Console.WriteLine("Kies een supplier");
             var SupID = Console.ReadLine();
             int supID;
             int.TryParse(SupID, out supID);
-            ToonProducts(catID, supID);
+            ToonProducts(supID);
         }
     }
 }
