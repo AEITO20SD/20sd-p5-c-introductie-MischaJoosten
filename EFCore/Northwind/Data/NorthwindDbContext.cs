@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Northwind.Data
 {
-    class NorthwindDbContext : DbContext
+    public class NorthwindDbContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; internal set; }
@@ -36,7 +36,10 @@ namespace Northwind.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_connectionString);
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_connectionString);
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
