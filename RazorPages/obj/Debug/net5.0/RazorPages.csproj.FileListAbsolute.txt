@@ -71,3 +71,4 @@ D:\School\C#\20sd-p5-c-introductie-MischaJoosten\RazorPages\obj\Debug\net5.0\Raz
 D:\School\C#\20sd-p5-c-introductie-MischaJoosten\RazorPages\obj\Debug\net5.0\ref\RazorPages.dll
 D:\School\C#\20sd-p5-c-introductie-MischaJoosten\RazorPages\obj\Debug\net5.0\RazorPages.pdb
 D:\School\C#\20sd-p5-c-introductie-MischaJoosten\RazorPages\obj\Debug\net5.0\RazorPages.genruntimeconfig.cache
+D:\School\C#\20sd-p5-c-introductie-MischaJoosten\RazorPages\obj\Debug\net5.0\Razor\Pages\Products.cshtml.g.cs

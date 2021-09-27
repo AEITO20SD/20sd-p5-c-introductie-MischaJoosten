@@ -1,0 +1,33 @@
+﻿@page
+@model RazorPages.Pages.ProductsModel
+@{
+}
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Category Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var products in Model.Products)
+            {
+                <tr>
+                    <td>
+                        @products.ProductName
+                    </td>
+                    <td>
+                        @products.Category.CategoryName
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
