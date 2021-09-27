@@ -1,0 +1,32 @@
+﻿@page
+@model RazorPages.Pages.SuppliersModel
+@{
+}
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Company Name
+                </th>
+                <th>
+                    Contact Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var supplier in Model.Suppliers)
+            {
+                <tr>
+                    <td>
+                        @supplier.CompanyName
+                    </td>
+                    <td>
+                        @supplier.ContactName
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
