@@ -15,6 +15,7 @@ namespace RazorPages.Pages
 
         public List<Product> Products { get; set; }
         public List<Category> Categories { get; private set; }
+        public List<Supplier> Suppliers { get; private set; }
 
         public ProductsModel(NorthwindDbContext context)
         {
@@ -28,6 +29,7 @@ namespace RazorPages.Pages
                 .OrderBy(Product => Product.ProductName)
                 .ToList();
             Categories = _context.Categories.ToList();
+            Suppliers = _context.Suppliers.ToList();
         }
     }
 }
